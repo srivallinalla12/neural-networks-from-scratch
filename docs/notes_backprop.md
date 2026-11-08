@@ -1,6 +1,6 @@
 # Notes: the derivations behind numpy_net.py
 
-Interview-ready summaries. If you can explain each of these out loud, you can hold your own in a TUM lab interview.
+The mathematics behind `numpy_net.py`, derived in full.
 
 ## Softmax + cross-entropy gradient
 

@@ -34,8 +34,8 @@ The purpose of this document is to outline the design and architecture of **Neur
 
 This application is designed for:
 
-- **The author**, as portfolio evidence of deep learning fundamentals for research supervisors and employers.
-- **Reviewers of the author's applications** (for example, PhD supervisors screening for PyTorch and custom-architecture experience).
+- **Portfolio use:** evidence of deep learning fundamentals for research supervisors and employers.
+- **Researchers and lab members** who want to verify the implementation and reproduce the results.
 - **Learners** who want a small, complete, readable example of backpropagation, Adam, and a residual convolutional network without framework magic.
 
 ### 1.2 System Overview
@@ -137,7 +137,7 @@ Python 3.12 on Linux, inside the project virtual environment. Development and al
 
 **Long-Run Interruption**
 
-- A multi-hour training run can be killed by a machine replacement. Mitigation: per-epoch checkpoints plus a resume path; the reported CIFAR-10 run in fact survived interruptions this way.
+- A multi-hour training run can be lost if the machine stops mid-run. Mitigation: per-epoch checkpoints plus a resume path; the reported CIFAR-10 run resumed from checkpoints after interruptions.
 
 **Result Integrity**
 

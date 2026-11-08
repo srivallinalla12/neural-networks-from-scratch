@@ -1,7 +1,7 @@
 # Neural Networks From Scratch: NumPy and PyTorch
 
 Author: Srivalli Nalla, MS Computer Science, George Mason University
-Purpose: Proof of deep, hands-on deep learning skill for research lab applications (TUM ML labs screen for exactly this: strong Python plus experience with deep learning frameworks, preferably PyTorch, and the ability to train and modify custom architectures).
+Purpose: Deep, hands-on practice with deep learning fundamentals: strong Python, PyTorch, and the ability to train and modify custom architectures, all built and verified from first principles rather than called from a high-level API.
 
 ## The point in one line
 
@@ -13,7 +13,7 @@ Anyone can call a high-level API. This repo builds the same classifier three way
 - `src/torch_net.py` The same ideas in PyTorch, written the way a lab writes them: a custom MLP with explicit initialisation, a CNN with a hand-written residual block, and a manual training loop (zero_grad, forward, loss, backward, step). No Trainer or other high-level wrapper.
 - `src/train_digits.py` One experiment, three models, one fixed split, so the results are comparable.
 - `tests/test_nets.py` Includes the gradient check: analytic gradients from the hand-written backprop are compared against numerical gradients. If the maths were wrong, this test would fail. It passes.
-- `docs/notes_backprop.md` The derivations a PhD interview will probe.
+- `docs/notes_backprop.md` The derivations behind the code, written out in full.
 
 ## Results (real runs, reproducible, CPU)
 
@@ -37,7 +37,7 @@ Same custom residual CNN, trained from scratch on the full CIFAR-10 training set
 | Best epoch | 23, at 80.53% |
 | Late-epoch range (27 to 30) | 75.6% to 76.7% |
 
-The run survived several machine replacements by resuming from its per-epoch checkpoints; the accuracy curve is noisy epoch to epoch, which is normal for this setup (small network, CPU, basic augmentation: crop and flip only).
+Training used per-epoch checkpoints, so an interrupted run resumes where it stopped. The accuracy curve is noisy epoch to epoch, which is normal for this setup (small network, CPU, basic augmentation: crop and flip only).
 
 ## Run it
 
@@ -49,6 +49,6 @@ python3 -m venv .venv
 .venv/bin/python -m src.train_digits
 ```
 
-## Skills this evidences, in the words TUM postings use
+## Skills demonstrated
 
 Custom neural network architectures from scratch; training loops; PyTorch; backpropagation verified by gradient checking; weight initialisation (He, Xavier); optimisers (Adam, implemented manually); BatchNorm, dropout, residual connections; model evaluation on a held-out split.

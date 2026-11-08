@@ -1,9 +1,8 @@
 """A small neural network implemented from scratch in NumPy.
 
 No autograd, no framework layers: every forward and backward pass below is
-written out by hand. This is the piece that proves (in code, and in a PhD
-interview) that the author understands backpropagation, weight initialisation,
-and Adam, rather than only calling a high-level API.
+written out by hand, so the code itself demonstrates backpropagation, weight
+initialisation, and Adam rather than only calling a high-level API.
 
 Components:
   Linear      -- fully connected layer, He initialisation, manual gradients

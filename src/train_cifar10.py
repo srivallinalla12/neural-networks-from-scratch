@@ -95,9 +95,9 @@ def main() -> None:
     start_epoch = 0
     ckpt_path = ROOT / "results" / "cifar10_checkpoint.pt"
     if not args.smoke and ckpt_path.exists():
-        # Resume after an interruption (this VM is replaced periodically,
-        # which kills plain background processes). The checkpoint is
-        # written after every epoch, so at most one epoch is ever lost.
+        # Resume after an interruption: the checkpoint written after the
+        # last completed epoch is loaded, so at most one epoch of work
+        # is ever lost.
         ckpt = torch.load(ckpt_path, map_location=device)
         model.load_state_dict(ckpt["model"])
         opt.load_state_dict(ckpt["opt"])
