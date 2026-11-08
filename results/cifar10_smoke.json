@@ -1,0 +1,20 @@
+{
+  "dataset": "CIFAR-10 (torchvision), standard train/test split",
+  "smoke_run": true,
+  "model": "CifarResCNN: stem + 2 custom ResidualBlocks, Adam lr 1e-3, crop+flip augmentation",
+  "final_test_accuracy": 0.365,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.0117,
+      "test_accuracy": 0.132,
+      "seconds": 24.7
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.8077,
+      "test_accuracy": 0.365,
+      "seconds": 23.6
+    }
+  ]
+}
