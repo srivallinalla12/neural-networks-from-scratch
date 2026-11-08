@@ -27,7 +27,7 @@ Dataset: sklearn digits, 1,797 handwritten 8x8 digits, stratified 80/20 split, s
 
 These are honest starter results on a small benchmark.
 
-## CIFAR-10 full run (completed 8 Nov 2026)
+## CIFAR-10 full run (completed November 2026)
 
 Same custom residual CNN, trained from scratch on the full CIFAR-10 training set (50,000 images), 30 epochs, CPU, with per-epoch checkpointing. Raw output: `results/cifar10_results.json`.
 

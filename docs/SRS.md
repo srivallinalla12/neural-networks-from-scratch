@@ -197,8 +197,8 @@ Runs 3 tests, including the numerical gradient check that verifies the NumPy bac
 
 ## Appendix A: Project Timeline and Measured Results
 
-- **6 November 2026:** NumPy network, Adam, and gradient check built and verified; PyTorch MLP and residual CNN built; digits benchmark completed.
-- **7–8 November 2026:** CIFAR-10 full run executed with per-epoch checkpointing (survived machine interruptions); completed all 30 epochs.
+- **Phase 1:** NumPy network, Adam, and gradient check built and verified; PyTorch MLP and residual CNN built; digits benchmark completed.
+- **Phase 2:** CIFAR-10 full run executed with per-epoch checkpointing; completed all 30 epochs.
 
 **Measured results (from the saved JSON files):**
 
