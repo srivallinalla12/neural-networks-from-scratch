@@ -10,7 +10,7 @@ Model: a CIFAR-sized version of the same residual CNN idea used on digits:
 average pooling, linear head. Trained with the SAME hand-written loop from
 torch_net.train_model, plus simple augmentation (random crop + flip).
 
-Full run (her MacBook or a free cloud GPU, about 30 epochs):
+Full run (local machine or a free cloud GPU, about 30 epochs):
   .venv/bin/python -m src.train_cifar10 --epochs 30
 
 Smoke run (verifies everything end to end on a small slice, minutes on CPU):
